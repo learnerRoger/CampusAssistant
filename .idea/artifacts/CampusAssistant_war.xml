@@ -7,7 +7,7 @@
         <packaging>war</packaging>
       </options>
     </properties>
-    <root id="archive" name="demo_springTest-1.0-SNAPSHOT.war">
+    <root id="archive" name="CampusAssistant-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="CampusAssistant:war exploded" />
     </root>
   </artifact>

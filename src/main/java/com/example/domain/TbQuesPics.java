@@ -1,7 +1,7 @@
 package com.example.domain;
 
 
-import com.example.dao.Question;
+import com.example.dao.QuestionDao;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ public class TbQuesPics {
 
   private String qId;
   private String picUrl;
-  private List<Question> questionList;
+  private List<TbQuestions> tbQuestionsList;
 
-  public List<Question> getQuestionList() {
-    return questionList;
+  public List<TbQuestions> getQuestionList() {
+    return tbQuestionsList;
   }
 
-  public void setQuestionList(List<Question> questionList) {
-    this.questionList = questionList;
+  public void setQuestionList(List<QuestionDao> questionList) {
+    this.tbQuestionsList = tbQuestionsList;
   }
 
   public String getQId() {
@@ -41,7 +41,7 @@ public class TbQuesPics {
     return "TbQuesPics{" +
             "qId='" + qId + '\'' +
             ", picUrl='" + picUrl + '\'' +
-            ", questionList=" + questionList +
+            ", tbQuestionsList=" + tbQuestionsList +
             '}';
   }
 }

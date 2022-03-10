@@ -1,4 +1,4 @@
 package com.example.dao;
 
-public interface View {
+public interface ViewDao {
 }

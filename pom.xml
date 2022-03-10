@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>demo_springTest</artifactId>
+    <artifactId>CampusAssistant</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>demo_springTest</name>
+    <name>CampusAssistant</name>
     <packaging>war</packaging>
 
     <properties>

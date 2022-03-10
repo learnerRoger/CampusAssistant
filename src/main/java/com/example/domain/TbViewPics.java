@@ -1,7 +1,7 @@
 package com.example.domain;
 
 
-import com.example.dao.View;
+import com.example.dao.ViewDao;
 
 import java.util.List;
 
@@ -9,14 +9,14 @@ public class TbViewPics {
 
   private String viewId;
   private String picUrl;
-  private List<View> viewList;
+  private List<TbViews> tbViewsList;
 
-  public List<View> getViewList() {
-    return viewList;
+  public List<TbViews> getTbViewsList() {
+    return tbViewsList;
   }
 
-  public void setViewList(List<View> viewList) {
-    this.viewList = viewList;
+  public void setTbViewsList(List<TbViews> tbViewsList) {
+    this.tbViewsList = tbViewsList;
   }
 
   public String getViewId() {
@@ -41,7 +41,7 @@ public class TbViewPics {
     return "TbViewPics{" +
             "viewId='" + viewId + '\'' +
             ", picUrl='" + picUrl + '\'' +
-            ", viewList=" + viewList +
+            ", tbViewsList=" + tbViewsList +
             '}';
   }
 }
