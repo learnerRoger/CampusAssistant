@@ -1,7 +1,6 @@
 package com.example.dao.impl;
 
 import com.example.dao.UserDao;
-import com.example.domain.User;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

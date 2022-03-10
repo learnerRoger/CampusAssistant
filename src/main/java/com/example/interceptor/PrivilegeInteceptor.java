@@ -1,6 +1,5 @@
 package com.example.interceptor;
 
-import com.example.domain.User;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

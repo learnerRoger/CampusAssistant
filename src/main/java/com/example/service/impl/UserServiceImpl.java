@@ -2,10 +2,6 @@ package com.example.service.impl;
 
 import com.example.dao.RoleDao;
 import com.example.dao.UserDao;
-import com.example.dao.impl.RoleDaoImpl;
-import com.example.dao.impl.UserDaoImpl;
-import com.example.domain.Role;
-import com.example.domain.User;
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

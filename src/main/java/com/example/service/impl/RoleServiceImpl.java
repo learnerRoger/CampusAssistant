@@ -1,7 +1,6 @@
 package com.example.service.impl;
 
 import com.example.dao.RoleDao;
-import com.example.domain.Role;
 import com.example.service.RoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

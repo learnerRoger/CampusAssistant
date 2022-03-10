@@ -1,7 +1,6 @@
 package com.example.dao.impl;
 
 import com.example.dao.RoleDao;
-import com.example.domain.Role;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

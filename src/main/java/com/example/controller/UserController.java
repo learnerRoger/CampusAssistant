@@ -1,8 +1,5 @@
 package com.example.controller;
 
-import com.example.domain.ResponseResult;
-import com.example.domain.Role;
-import com.example.domain.User;
 import com.example.service.RoleService;
 import com.example.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
