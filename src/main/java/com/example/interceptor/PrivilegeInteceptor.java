@@ -1,5 +1,6 @@
 package com.example.interceptor;
 
+import com.example.domain.TbUsers;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -11,12 +12,6 @@ public class PrivilegeInteceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
-        if (user == null){
-            response.sendRedirect(request.getContextPath() + "/login.jsp");
-            return false;
-        }
         return HandlerInterceptor.super.preHandle(request, response, handler);
     }
 

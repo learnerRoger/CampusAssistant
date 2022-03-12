@@ -1,5 +1,7 @@
 package com.example.utils;
 
+import com.example.domain.ResponseResult;
+
 import javax.servlet.http.HttpServletResponse;
 
 public class ResponseUtils2 {
