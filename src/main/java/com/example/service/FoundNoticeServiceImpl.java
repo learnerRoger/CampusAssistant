@@ -30,4 +30,12 @@ public class FoundNoticeServiceImpl {
         List<TbFoundNotice> tbFoundNoticeList = foundNoticeMapper.findAll();
         return tbFoundNoticeList;
     }
+
+    public void removeFoundNotice(String found_id) throws Exception {
+        SqlSession sqlSession = configService.returnSqlSession();
+        FoundNoticeMapper foundNoticeMapper = sqlSession.getMapper(FoundNoticeMapper.class);
+        foundNoticeMapper.removeFoundNotice(found_id);
+        sqlSession.commit();
+        sqlSession.close();
+    }
 }
