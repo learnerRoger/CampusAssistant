@@ -1,9 +1,10 @@
 package com.example.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.sql.Timestamp;
 import java.util.Date;
-import java.util.List;
 
 public class TbFoundNotice {
 
@@ -12,9 +13,11 @@ public class TbFoundNotice {
   private String title;
   private String content;
   private String goods_desc;
+  @JsonFormat(pattern = "yy-MM-dd HH:mm:ss",timezone = "GMT+8")
   private Timestamp found_time;
   private String lost_place;
   private String contact;
+  @JsonFormat(pattern = "yy-MM-dd HH:mm:ss",timezone = "GMT+8")
   private Timestamp post_time;
 
 
