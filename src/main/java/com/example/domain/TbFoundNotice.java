@@ -1,37 +1,38 @@
 package com.example.domain;
 
 
+import java.sql.Timestamp;
+import java.util.Date;
 import java.util.List;
 
 public class TbFoundNotice {
 
-  private String foundId;
-  private String idCard;
+  private String found_id;
+  private String id_card;
   private String title;
   private String content;
-  private String goodsDesc;
-  private java.sql.Timestamp foundTime;
-  private String lostPlace;
+  private String goods_desc;
+  private Timestamp found_time;
+  private String lost_place;
   private String contact;
-  private java.sql.Timestamp postTime;
-  private List<TbUsers> tbUsersList;
+  private Timestamp post_time;
 
 
-  public String getFoundId() {
-    return foundId;
+  public String getFound_id() {
+    return found_id;
   }
 
-  public void setFoundId(String foundId) {
-    this.foundId = foundId;
+  public void setFound_id(String found_id) {
+    this.found_id = found_id;
   }
 
 
-  public String getIdCard() {
-    return idCard;
+  public String getId_card() {
+    return id_card;
   }
 
-  public void setIdCard(String idCard) {
-    this.idCard = idCard;
+  public void setId_card(String id_card) {
+    this.id_card = id_card;
   }
 
 
@@ -42,26 +43,18 @@ public class TbFoundNotice {
   @Override
   public String toString() {
     return "TbFoundNotice{" +
-            "foundId='" + foundId + '\'' +
-            ", idCard='" + idCard + '\'' +
+            "found_id='" + found_id + '\'' +
+            ", id_card='" + id_card + '\'' +
             ", title='" + title + '\'' +
             ", content='" + content + '\'' +
-            ", goodsDesc='" + goodsDesc + '\'' +
-            ", foundTime=" + foundTime +
-            ", lostPlace='" + lostPlace + '\'' +
+            ", goods_desc='" + goods_desc + '\'' +
+            ", found_time=" + found_time +
+            ", lost_place='" + lost_place + '\'' +
             ", contact='" + contact + '\'' +
-            ", postTime=" + postTime +
-            ", tbUsersList=" + tbUsersList +
+            ", post_time=" + post_time +
             '}';
   }
 
-  public List<TbUsers> getTbUsersList() {
-    return tbUsersList;
-  }
-
-  public void setTbUsersList(List<TbUsers> tbUsersList) {
-    this.tbUsersList = tbUsersList;
-  }
 
   public void setTitle(String title) {
     this.title = title;
@@ -77,30 +70,30 @@ public class TbFoundNotice {
   }
 
 
-  public String getGoodsDesc() {
-    return goodsDesc;
+  public String getGoods_desc() {
+    return goods_desc;
   }
 
-  public void setGoodsDesc(String goodsDesc) {
-    this.goodsDesc = goodsDesc;
-  }
-
-
-  public java.sql.Timestamp getFoundTime() {
-    return foundTime;
-  }
-
-  public void setFoundTime(java.sql.Timestamp foundTime) {
-    this.foundTime = foundTime;
+  public void setGoods_desc(String goods_desc) {
+    this.goods_desc = goods_desc;
   }
 
 
-  public String getLostPlace() {
-    return lostPlace;
+  public Date getFound_time() {
+    return found_time;
   }
 
-  public void setLostPlace(String lostPlace) {
-    this.lostPlace = lostPlace;
+  public void setFound_time(Timestamp found_time) {
+    this.found_time = found_time;
+  }
+
+
+  public String getLost_place() {
+    return lost_place;
+  }
+
+  public void setLost_place(String lost_place) {
+    this.lost_place = lost_place;
   }
 
 
@@ -113,12 +106,12 @@ public class TbFoundNotice {
   }
 
 
-  public java.sql.Timestamp getPostTime() {
-    return postTime;
+  public Date getPost_time() {
+    return post_time;
   }
 
-  public void setPostTime(java.sql.Timestamp postTime) {
-    this.postTime = postTime;
+  public void setPost_time(Timestamp post_time) {
+    this.post_time = post_time;
   }
 
 }

@@ -6,6 +6,7 @@
 
     <typeAliases>
         <typeAlias type="com.example.domain.TbUsers" alias="tbUsers"></typeAlias>
+        <typeAlias type="com.example.domain.TbFoundNotice" alias="tbFoundNotice"></typeAlias>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -22,5 +23,6 @@
     <!--加载映射文件-->
     <mappers>
         <mapper resource="mapper/UserMapper.xml"></mapper>
+        <mapper resource="mapper/FoundNotice.xml"></mapper>
     </mappers>
 </configuration>
