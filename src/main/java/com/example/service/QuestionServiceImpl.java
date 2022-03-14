@@ -32,5 +32,7 @@ public class QuestionServiceImpl {
         SqlSession sqlSession = configService.returnSqlSession();
         QuestionMapper questionMapper =sqlSession.getMapper(QuestionMapper.class);
         questionMapper.removeQuestion(q_id);
+        sqlSession.commit();
+        sqlSession.close();
     }
 }

@@ -34,7 +34,7 @@ public class QuestionController {
     public ModelAndView deliver(TbQuestions tbQuestions) throws Exception{
         ModelAndView modelAndView = new ModelAndView();
         questionService.addQuestion(tbQuestions);
-        modelAndView.setViewName("/questions/selectQuestions");
+        modelAndView.setViewName("/question/selectQuestions");
         return modelAndView;
     }
 
@@ -42,7 +42,7 @@ public class QuestionController {
     public ModelAndView removeQuestion(@PathVariable("q_id") String q_id) throws Exception {
         questionService.removeQuestion(q_id);
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("/questions/selectQuestion");
+        modelAndView.setViewName("/question/selectQuestions");
         return modelAndView;
     }
 
