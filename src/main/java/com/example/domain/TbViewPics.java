@@ -5,41 +5,30 @@ import java.util.List;
 
 public class TbViewPics {
 
-  private String viewId;
-  private String picUrl;
-  private List<TbViews> tbViewsList;
+  private String view_id;
+  private String pic_url;
 
-  public List<TbViews> getTbViewsList() {
-    return tbViewsList;
+  public String getView_id() {
+    return view_id;
   }
 
-  public void setTbViewsList(List<TbViews> tbViewsList) {
-    this.tbViewsList = tbViewsList;
+  public void setView_id(String view_id) {
+    this.view_id = view_id;
   }
 
-  public String getViewId() {
-    return viewId;
+  public String getPic_url() {
+    return pic_url;
   }
 
-  public void setViewId(String viewId) {
-    this.viewId = viewId;
-  }
-
-
-  public String getPicUrl() {
-    return picUrl;
-  }
-
-  public void setPicUrl(String picUrl) {
-    this.picUrl = picUrl;
+  public void setPic_url(String pic_url) {
+    this.pic_url = pic_url;
   }
 
   @Override
   public String toString() {
     return "TbViewPics{" +
-            "viewId='" + viewId + '\'' +
-            ", picUrl='" + picUrl + '\'' +
-            ", tbViewsList=" + tbViewsList +
+            "view_id='" + view_id + '\'' +
+            ", pic_url='" + pic_url + '\'' +
             '}';
   }
 }

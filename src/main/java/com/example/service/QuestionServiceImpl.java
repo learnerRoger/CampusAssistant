@@ -21,4 +21,16 @@ public class QuestionServiceImpl {
         List<TbQuestions> tbQuestionsList = questionMapper.findAll();
         return tbQuestionsList;
     }
+
+    public void addQuestion(TbQuestions tbQuestions) throws Exception{
+        SqlSession sqlSession = configService.returnSqlSession();
+        QuestionMapper questionMapper =sqlSession.getMapper(QuestionMapper.class);
+        questionMapper.addQuestion(tbQuestions);
+    }
+
+    public void removeQuestion(String q_id) throws Exception{
+        SqlSession sqlSession = configService.returnSqlSession();
+        QuestionMapper questionMapper =sqlSession.getMapper(QuestionMapper.class);
+        questionMapper.removeQuestion(q_id);
+    }
 }

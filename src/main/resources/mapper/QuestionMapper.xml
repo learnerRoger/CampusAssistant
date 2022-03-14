@@ -26,6 +26,16 @@
             <result column="post_time" property="post_time"></result>
             <result column="comment" property="comment"></result>
             <result column="approvals" property="approvals"></result>
+            <result column="id_card" property="tb_users.id_card"></result>
+            <result column="name" property="tb_users.name"></result>
+            <result column="acadmey" property="tb_users.acadmey"></result>
+            <result column="nick_name" property="tb_users.nick_name"></result>
+            <result column="city" property="tb_users.city"></result>
+            <result column="province" property="tb_users.province"></result>
+            <result column="avatar_url" property="tb_users.avatar_url"></result>
+            <result column="gender" property="tb_users.gender"></result>
+            <result column="view_id" property="tb_view_pics.view_id"></result>
+            <result column="pic_url" property="tb_view_pics.pic_url"></result>
         </collection>
     </resultMap>
     <select id="findAll" resultMap="questionMap">
@@ -39,7 +49,7 @@
         insert into tb_users values (#{id_card},#{name},#{acadmey},#{nick_name},#{city},#{province},#{avatar_url},#{gender})
     </insert>
 
-    <delete id="removeUser" parameterType="java.lang.String">
-        delete from tb_users where id_card = #{id_card}
+    <delete id="removeQuestion" parameterType="java.lang.String">
+        delete from tb_questions where q_id = #{q_id}
     </delete>
 </mapper>
