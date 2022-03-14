@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-
-
 <mapper namespace="com.example.dao.FoundNoticeMapper">
+    
+    <resultMap id="foundNoticeMap" type="tbFoundNotice">
+        <id column="found_id" property="found_id"></id>
+        <result column="id_card" property="id_card"></result>
+        <result column="title" property="title"></result>
+        <result column="content" property="content"></result>
+        <result column="goods_desc" property="goods_desc"></result>
+        <result column="found_time" property="found_time"></result>
+        <result column="lost_place" property="lost_place"></result>
+        <result column="contact" property="contact"></result>
+        <result column="post_time" property="post_time"></result>
+        <result column="id_card" property="tb_users.id_card"></result>
+        <result column="name" property="tb_users.name"></result>
+        <result column="acadmey" property="tb_users.acadmey"></result>
+        <result column="nick_name" property="tb_users.nick_name"></result>
+        <result column="city" property="tb_users.city"></result>
+        <result column="province" property="tb_users.province"></result>
+        <result column="avatar_url" property="tb_users.avatar_url"></result>
+        <result column="gender" property="tb_users.gender"></result>
+        <result column="found_id" property="tb_fn_pics.found_id"></result>
+        <result column="pic_url" property="tb_fn_pics.pic_url"></result>
+    </resultMap>
+    
     <insert id="addFoundNotice" parameterType="tbFoundNotice">
         insert into tb_found_notice values (#{found_id},#{id_card},#{title},#{content},#{goods_desc},#{found_time},#{lost_place},#{contact},#{post_time})
     </insert>
 
-    <select id="findAll" resultType="tbFoundNotice">
-        select * from tb_found_notice
+    <select id="findAll" resultMap="foundNoticeMap">
+        select * from tb_found_notice,tb_users,tb_fn_pics
+            <where>
+                tb_found_notice.id_card=tb_users.id_card and tb_found_notice.found_id=tb_fn_pics.found_id
+            </where>
     </select>
 
     <delete id="removeFoundNotice" parameterType="java.lang.String">

@@ -5,4 +5,6 @@ import org.springframework.stereotype.Service;
 @Service("viewService")
 public class ViewServiceImpl {
 
+    public void deliver() {
+    }
 }

@@ -1,41 +1,55 @@
 package com.example.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.List;
 
 public class TbQuestions {
 
-  private String qId;
-  private String idCard;
+  private String q_id;
+  private String id_card;
   private String title;
-  private java.sql.Timestamp postTime;
+  @JsonFormat(pattern = "yy-MM-dd HH:mm:ss",timezone = "GMT+8")
+  private java.sql.Timestamp post_time;
   private String content;
-  private List<TbUsers> tbUsersList;
+  private TbUsers tb_users;
+  private TbQuesPics tb_ques_pics;
+  private List<TbViews> tbViewsList;
 
-
-  public List<TbUsers> getTbUsersList() {
-    return tbUsersList;
+  public TbUsers getTb_users() {
+    return tb_users;
   }
 
-  public void setTbUsersList(List<TbUsers> tbUsersList) {
-    this.tbUsersList = tbUsersList;
+  public void setTb_users(TbUsers tb_users) {
+    this.tb_users = tb_users;
   }
 
-  public String getQId() {
-    return qId;
+  public TbQuesPics getTb_ques_pics() {
+    return tb_ques_pics;
   }
 
-  public void setQId(String qId) {
-    this.qId = qId;
+  public void setTb_ques_pics(TbQuesPics tb_ques_pics) {
+    this.tb_ques_pics = tb_ques_pics;
   }
 
 
-  public String getIdCard() {
-    return idCard;
+
+  public String getQ_id() {
+    return q_id;
   }
 
-  public void setIdCard(String idCard) {
-    this.idCard = idCard;
+  public void setQ_id(String q_id) {
+    this.q_id = q_id;
+  }
+
+
+  public String getId_card() {
+    return id_card;
+  }
+
+  public void setId_card(String id_card) {
+    this.id_card = id_card;
   }
 
 
@@ -48,12 +62,12 @@ public class TbQuestions {
   }
 
 
-  public java.sql.Timestamp getPostTime() {
-    return postTime;
+  public java.sql.Timestamp getPost_time() {
+    return post_time;
   }
 
-  public void setPostTime(java.sql.Timestamp postTime) {
-    this.postTime = postTime;
+  public void setPost_time(java.sql.Timestamp post_time) {
+    this.post_time = post_time;
   }
 
 
@@ -65,15 +79,25 @@ public class TbQuestions {
     this.content = content;
   }
 
+  public List<TbViews> getTbViewsList() {
+    return tbViewsList;
+  }
+
+  public void setTbViewsList(List<TbViews> tbViewsList) {
+    this.tbViewsList = tbViewsList;
+  }
+
   @Override
   public String toString() {
     return "TbQuestions{" +
-            "qId='" + qId + '\'' +
-            ", idCard='" + idCard + '\'' +
+            "q_id='" + q_id + '\'' +
+            ", id_card='" + id_card + '\'' +
             ", title='" + title + '\'' +
-            ", postTime=" + postTime +
+            ", post_time=" + post_time +
             ", content='" + content + '\'' +
-            ", tbUsersList=" + tbUsersList +
+            ", tb_users=" + tb_users +
+            ", tb_ques_pics=" + tb_ques_pics +
+            ", tbViewsList=" + tbViewsList +
             '}';
   }
 }

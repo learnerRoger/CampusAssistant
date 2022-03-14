@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.dao.QuestionMapper">
+
+    <resultMap id="questionMap" type="tbQuestions">
+        <id column="q_id" property="q_id"></id>
+        <result column="id_card" property="id_card"></result>
+        <result column="title" property="title"></result>
+        <result column="post_time" property="post_time"></result>
+        <result column="content" property="content"></result>
+        <result column="id_card" property="tb_users.id_card"></result>
+        <result column="name" property="tb_users.name"></result>
+        <result column="acadmey" property="tb_users.acadmey"></result>
+        <result column="nick_name" property="tb_users.nick_name"></result>
+        <result column="city" property="tb_users.city"></result>
+        <result column="province" property="tb_users.province"></result>
+        <result column="avatar_url" property="tb_users.avatar_url"></result>
+        <result column="gender" property="tb_users.gender"></result>
+        <result column="q_id" property="tb_ques_pics.q_id"></result>
+        <result column="pic_url" property="tb_ques_pics.pic_url"></result>
+        <collection property="tbViewsList" ofType="tbView">
+            <id column="view_id" property="view_id"></id>
+            <result column="id_card" property="id_card"></result>
+            <result column="q_id" property="q_id"></result>
+            <result column="content" property="content"></result>
+            <result column="post_time" property="post_time"></result>
+            <result column="comment" property="comment"></result>
+            <result column="approvals" property="approvals"></result>
+        </collection>
+    </resultMap>
+    <select id="findAll" resultMap="questionMap">
+        select * from tb_questions q,tb_users u,tb_ques_pics qp,tb_views v
+<!--            <where>-->
+<!--                q.id_card=u.id_card  and v.id_card=u.id_card-->
+<!--            </where>-->
+    </select>
+
+    <insert id="addUser" parameterType="tbQuestions">
+        insert into tb_users values (#{id_card},#{name},#{acadmey},#{nick_name},#{city},#{province},#{avatar_url},#{gender})
+    </insert>
+
+    <delete id="removeUser" parameterType="java.lang.String">
+        delete from tb_users where id_card = #{id_card}
+    </delete>
+</mapper>

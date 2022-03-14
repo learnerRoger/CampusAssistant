@@ -44,9 +44,9 @@ public class FoundNoticeController {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
         String strBeginDate = dateFormat.format(date.getTime());
-        tbFoundNotice.setFound_id("4");
-        tbFoundNotice.setId_card("003");
-        tbFoundNotice.setTitle("这是第二个测试title");
+        tbFoundNotice.setFound_id("7");
+        tbFoundNotice.setId_card("007");
+        tbFoundNotice.setTitle("这是第7个测试title");
         tbFoundNotice.setContent("这是第二个测试content");
         tbFoundNotice.setGoods_desc("这是第二个测试的goods_desc");
         tbFoundNotice.setFound_time(Timestamp.valueOf(strBeginDate));

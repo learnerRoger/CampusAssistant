@@ -1,8 +1,6 @@
 package com.example.domain;
 
 
-import com.example.dao.ViewDao;
-
 import java.util.List;
 
 public class TbViewPics {

@@ -5,8 +5,8 @@ import java.util.List;
 
 public class TbSearchNotice {
 
-  private String searchId;
-  private String idCard;
+  private String search_id;
+  private String id_card;
   private String title;
   private String content;
   private String goodsDesc;
@@ -24,21 +24,21 @@ public class TbSearchNotice {
     this.tbUsersList = tbUsersList;
   }
 
-  public String getSearchId() {
-    return searchId;
+  public String getSearch_id() {
+    return search_id;
   }
 
-  public void setSearchId(String searchId) {
-    this.searchId = searchId;
+  public void setSearch_id(String search_id) {
+    this.search_id = search_id;
   }
 
 
-  public String getIdCard() {
-    return idCard;
+  public String getId_card() {
+    return id_card;
   }
 
-  public void setIdCard(String idCard) {
-    this.idCard = idCard;
+  public void setId_card(String id_card) {
+    this.id_card = id_card;
   }
 
 
@@ -107,8 +107,8 @@ public class TbSearchNotice {
   @Override
   public String toString() {
     return "TbSearchNotice{" +
-            "searchId='" + searchId + '\'' +
-            ", idCard='" + idCard + '\'' +
+            "search_id='" + search_id + '\'' +
+            ", id_card='" + id_card + '\'' +
             ", title='" + title + '\'' +
             ", content='" + content + '\'' +
             ", goodsDesc='" + goodsDesc + '\'' +

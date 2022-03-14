@@ -7,6 +7,8 @@
     <typeAliases>
         <typeAlias type="com.example.domain.TbUsers" alias="tbUsers"></typeAlias>
         <typeAlias type="com.example.domain.TbFoundNotice" alias="tbFoundNotice"></typeAlias>
+        <typeAlias type="com.example.domain.TbQuestions" alias="tbQuestions"></typeAlias>
+        <typeAlias type="com.example.domain.TbViews" alias="tbView"></typeAlias>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -24,5 +26,7 @@
     <mappers>
         <mapper resource="mapper/UserMapper.xml"></mapper>
         <mapper resource="mapper/FoundNotice.xml"></mapper>
+        <mapper resource="mapper/QuestionMapper.xml"></mapper>
+        <mapper resource="mapper/ViewMapper.xml"></mapper>
     </mappers>
 </configuration>

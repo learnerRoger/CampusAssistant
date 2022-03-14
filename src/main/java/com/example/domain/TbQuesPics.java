@@ -1,47 +1,32 @@
 package com.example.domain;
 
 
-import com.example.dao.QuestionDao;
-
-import java.util.List;
-
 public class TbQuesPics {
 
-  private String qId;
-  private String picUrl;
-  private List<TbQuestions> tbQuestionsList;
+  private String q_id;
+  private String pic_url;
 
-  public List<TbQuestions> getQuestionList() {
-    return tbQuestionsList;
+  public String getQ_id() {
+    return q_id;
   }
 
-  public void setQuestionList(List<QuestionDao> questionList) {
-    this.tbQuestionsList = tbQuestionsList;
+  public void setQ_id(String q_id) {
+    this.q_id = q_id;
   }
 
-  public String getQId() {
-    return qId;
+  public String getPic_url() {
+    return pic_url;
   }
 
-  public void setQId(String qId) {
-    this.qId = qId;
-  }
-
-
-  public String getPicUrl() {
-    return picUrl;
-  }
-
-  public void setPicUrl(String picUrl) {
-    this.picUrl = picUrl;
+  public void setPic_url(String pic_url) {
+    this.pic_url = pic_url;
   }
 
   @Override
   public String toString() {
     return "TbQuesPics{" +
-            "qId='" + qId + '\'' +
-            ", picUrl='" + picUrl + '\'' +
-            ", tbQuestionsList=" + tbQuestionsList +
+            "q_id='" + q_id + '\'' +
+            ", pic_url='" + pic_url + '\'' +
             '}';
   }
 }

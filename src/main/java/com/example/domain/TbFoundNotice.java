@@ -13,6 +13,8 @@ public class TbFoundNotice {
   private String title;
   private String content;
   private String goods_desc;
+  private TbUsers tb_users;
+  private TbFnPics tb_fn_pics;
   @JsonFormat(pattern = "yy-MM-dd HH:mm:ss",timezone = "GMT+8")
   private Timestamp found_time;
   private String lost_place;
@@ -43,21 +45,21 @@ public class TbFoundNotice {
     return title;
   }
 
-  @Override
-  public String toString() {
-    return "TbFoundNotice{" +
-            "found_id='" + found_id + '\'' +
-            ", id_card='" + id_card + '\'' +
-            ", title='" + title + '\'' +
-            ", content='" + content + '\'' +
-            ", goods_desc='" + goods_desc + '\'' +
-            ", found_time=" + found_time +
-            ", lost_place='" + lost_place + '\'' +
-            ", contact='" + contact + '\'' +
-            ", post_time=" + post_time +
-            '}';
+  public TbUsers getTb_users() {
+    return tb_users;
   }
 
+  public void setTb_users(TbUsers tb_users) {
+    this.tb_users = tb_users;
+  }
+
+  public TbFnPics getTb_fn_pics() {
+    return tb_fn_pics;
+  }
+
+  public void setTb_fn_pics(TbFnPics tb_fn_pics) {
+    this.tb_fn_pics = tb_fn_pics;
+  }
 
   public void setTitle(String title) {
     this.title = title;
@@ -117,4 +119,20 @@ public class TbFoundNotice {
     this.post_time = post_time;
   }
 
+  @Override
+  public String toString() {
+    return "TbFoundNotice{" +
+            "found_id='" + found_id + '\'' +
+            ", id_card='" + id_card + '\'' +
+            ", title='" + title + '\'' +
+            ", content='" + content + '\'' +
+            ", goods_desc='" + goods_desc + '\'' +
+            ", tb_users=" + tb_users +
+            ", tb_fn_pics=" + tb_fn_pics +
+            ", found_time=" + found_time +
+            ", lost_place='" + lost_place + '\'' +
+            ", contact='" + contact + '\'' +
+            ", post_time=" + post_time +
+            '}';
+  }
 }

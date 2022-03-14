@@ -1,62 +1,62 @@
 package com.example.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.sql.Timestamp;
 import java.util.List;
 
 public class TbViews {
 
-  private String viewId;
-  private String idCard;
-  private String qId;
+  private String view_id;
+  private String id_card;
+  private String q_id;
   private String content;
-  private java.sql.Timestamp postTime;
+  @JsonFormat(pattern = "yy-MM-dd HH:mm:ss",timezone = "GMT+8")
+  private java.sql.Timestamp post_time;
   private String comment;
   private long approvals;
-  private List<TbUsers> tbUsersList;
-  private List<TbQuestions> tbQuestionsList;
+  private TbUsers tb_users;
+  private TbViewPics tb_view_pics;
 
-  public List<TbUsers> getTbUsersList() {
-    return tbUsersList;
+  @Override
+  public String toString() {
+    return "TbViews{" +
+            "view_id='" + view_id + '\'' +
+            ", id_card='" + id_card + '\'' +
+            ", q_id='" + q_id + '\'' +
+            ", content='" + content + '\'' +
+            ", post_time=" + post_time +
+            ", comment='" + comment + '\'' +
+            ", approvals=" + approvals +
+            ", tb_users=" + tb_users +
+            ", tb_view_pics=" + tb_view_pics +
+            '}';
   }
 
-  public void setTbUsersList(List<TbUsers> tbUsersList) {
-    this.tbUsersList = tbUsersList;
+  public String getView_id() {
+    return view_id;
   }
 
-  public List<TbQuestions> getTbQuestionsList() {
-    return tbQuestionsList;
+  public void setView_id(String view_id) {
+    this.view_id = view_id;
   }
 
-  public void setTbQuestionsList(List<TbQuestions> tbQuestionsList) {
-    this.tbQuestionsList = tbQuestionsList;
+  public String getId_card() {
+    return id_card;
   }
 
-  public String getViewId() {
-    return viewId;
+  public void setId_card(String id_card) {
+    this.id_card = id_card;
   }
 
-  public void setViewId(String viewId) {
-    this.viewId = viewId;
+  public String getQ_id() {
+    return q_id;
   }
 
-
-  public String getIdCard() {
-    return idCard;
+  public void setQ_id(String q_id) {
+    this.q_id = q_id;
   }
-
-  public void setIdCard(String idCard) {
-    this.idCard = idCard;
-  }
-
-
-  public String getQId() {
-    return qId;
-  }
-
-  public void setQId(String qId) {
-    this.qId = qId;
-  }
-
 
   public String getContent() {
     return content;
@@ -66,15 +66,13 @@ public class TbViews {
     this.content = content;
   }
 
-
-  public java.sql.Timestamp getPostTime() {
-    return postTime;
+  public Timestamp getPost_time() {
+    return post_time;
   }
 
-  public void setPostTime(java.sql.Timestamp postTime) {
-    this.postTime = postTime;
+  public void setPost_time(Timestamp post_time) {
+    this.post_time = post_time;
   }
-
 
   public String getComment() {
     return comment;
@@ -84,7 +82,6 @@ public class TbViews {
     this.comment = comment;
   }
 
-
   public long getApprovals() {
     return approvals;
   }
@@ -93,18 +90,19 @@ public class TbViews {
     this.approvals = approvals;
   }
 
-  @Override
-  public String toString() {
-    return "TbViews{" +
-            "viewId='" + viewId + '\'' +
-            ", idCard='" + idCard + '\'' +
-            ", qId='" + qId + '\'' +
-            ", content='" + content + '\'' +
-            ", postTime=" + postTime +
-            ", comment='" + comment + '\'' +
-            ", approvals=" + approvals +
-            ", tbUsersList=" + tbUsersList +
-            ", tbQuestionsList=" + tbQuestionsList +
-            '}';
+  public TbUsers getTb_users() {
+    return tb_users;
+  }
+
+  public void setTb_users(TbUsers tb_users) {
+    this.tb_users = tb_users;
+  }
+
+  public TbViewPics getTb_view_pics() {
+    return tb_view_pics;
+  }
+
+  public void setTb_view_pics(TbViewPics tb_view_pics) {
+    this.tb_view_pics = tb_view_pics;
   }
 }

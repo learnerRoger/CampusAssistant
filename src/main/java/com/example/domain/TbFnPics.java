@@ -5,41 +5,31 @@ import java.util.List;
 
 public class TbFnPics {
 
-  private String foundId;
-  private String picUrl;
-  private List<TbFoundNotice> tbFoundNoticeList;
+  private String found_id;
+  private String pic_url;
 
-  public List<TbFoundNotice> getTbFoundNoticeList() {
-    return tbFoundNoticeList;
+
+  public String getFound_id() {
+    return found_id;
   }
 
-  public void setTbFoundNoticeList(List<TbFoundNotice> tbFoundNoticeList) {
-    this.tbFoundNoticeList = tbFoundNoticeList;
+  public void setFound_id(String found_id) {
+    this.found_id = found_id;
   }
 
-  public String getFoundId() {
-    return foundId;
+  public String getPic_url() {
+    return pic_url;
   }
 
-  public void setFoundId(String foundId) {
-    this.foundId = foundId;
-  }
-
-
-  public String getPicUrl() {
-    return picUrl;
-  }
-
-  public void setPicUrl(String picUrl) {
-    this.picUrl = picUrl;
+  public void setPic_url(String pic_url) {
+    this.pic_url = pic_url;
   }
 
   @Override
   public String toString() {
     return "TbFnPics{" +
-            "foundId='" + foundId + '\'' +
-            ", picUrl='" + picUrl + '\'' +
-            ", tbFoundNoticeList=" + tbFoundNoticeList +
+            "found_id='" + found_id + '\'' +
+            ", pic_url='" + pic_url + '\'' +
             '}';
   }
 }
