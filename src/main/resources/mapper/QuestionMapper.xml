@@ -30,9 +30,9 @@
     </resultMap>
     <select id="findAll" resultMap="questionMap">
         select * from tb_questions q,tb_users u,tb_ques_pics qp,tb_views v
-<!--            <where>-->
-<!--                q.id_card=u.id_card  and v.id_card=u.id_card-->
-<!--            </where>-->
+            <where>
+                v.q_id = q.q_id
+            </where>
     </select>
 
     <insert id="addUser" parameterType="tbQuestions">
